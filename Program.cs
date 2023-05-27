@@ -8,17 +8,18 @@ else if (a > 100 && a < 200)
 {
     Console.WriteLine(a * 1.07);
 }
-else 
+else
 {
     Console.WriteLine(a * 1.1);
 }
 */
-/*Console.Write("Введите количество долларов: ");
-double dollars = double.Parse(Console.ReadLine());
-double uan = 6.75;
-Console.WriteLine($"Столько будет долларов в юанях:{dollars + uan} ");
-*/
 
+/*
+Console.Write("Введите количество долларов: ");
+int dollars = int.Parse(Console.ReadLine());
+double uan = 6.75;
+Console.WriteLine($"Столько будет долларов в юанях: {dollars * uan:0.00} китайский юань");
+*/
 
 // Домашняя Работа
 
@@ -28,8 +29,8 @@ Console.WriteLine($"Столько будет долларов в юанях:{do
 
 Console.Write("Введите темепературу по шкале Цельсия: ");
 double a = double.Parse(Console.ReadLine());
-double Farengate = 32, b = 5;
-double Kelvin = 273.13;
+double farengate = 32   ;
+double kelvin = 273.13;
 Console.WriteLine($"Температура по фаренгейту:{(a - Farengate) * 5}");
 Console.WriteLine($"Температура по кельвину: {a + Kelvin}");
 
@@ -84,7 +85,7 @@ else
 }*/
 
 //Задача 3
-/*Console.WriteLine("Привет, я могу проверить твои знания таблицы умножения! \n Напиши мне два целых однозначных числа: ");
+/*Console.WriteLine("Привет, я могу проверить твои знания таблицы умножения! \nНапиши мне два целых однозначных числа: ");
 int a = int.Parse(Console.ReadLine());
 int b = int.Parse(Console.ReadLine());
 int c = a * b;
@@ -99,4 +100,29 @@ else
     Console.WriteLine($"К сожалению ты ошибся, правильный ответ {c} \n Не расстраивайся и подучи таблицу умножения ;)");
 }*/
 
-// Задача 4 (1-4 год, 5-20 лет, 21 год, 22-24 года,25 - 30 лет 31 год, 32 - 34 года...)
+// Задача 4 (1 , 2-4 года, 5-20 лет, 21 год, 22-24 года,25 - 30 лет 31 год, 32 - 34 года...)
+
+Console.Write("Напишите Ваш возраст: ");
+int age = int.Parse(Console.ReadLine());
+switch (age)
+{
+    case int a when age == 1:
+        Console.WriteLine("Вам один год");
+        break;
+    case int a when age > 1 && age < 5:
+        Console.WriteLine($"Вам {a} года");
+        break;
+    case int a when age > 4 && age < 21:
+        Console.WriteLine($"Вам {a} лет");
+        break;
+    case int a when age % 10 == 1: Console.WriteLine($"Вам {age} год ");
+        break;
+    case int a when age % 10 != 1 && age % 10 >= 5:
+        Console.WriteLine($"Вам {age} лет");
+        break;
+    case int a when age % 10 != 1 && age % 10 < 5:
+        Console.WriteLine($"Вам {age} года");
+        break;
+}
+
+
